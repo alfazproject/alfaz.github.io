@@ -1,0 +1,102 @@
+# Membuat file JSON template dasar untuk layout Elementor seperti yang diminta.
+
+elementor_template = {
+    "name": "how_to_begin_template",
+    "title": "How to Begin Template",
+    "type": "section",
+    "content": [
+        {
+            "type": "section",
+            "settings": {
+                "layout": "two-column",
+                "background_color": "#ffffff",
+                "padding": {
+                    "top": "50px",
+                    "bottom": "50px",
+                    "left": "20px",
+                    "right": "20px"
+                }
+            },
+            "elements": [
+                {
+                    "type": "column",
+                    "settings": {"width": "50%"},
+                    "elements": [
+                        {
+                            "type": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                                "title": "How to begin",
+                                "level": "h1",
+                                "align": "left",
+                                "typography": {"font_size": "36px", "font_family": "Arial"}
+                            }
+                        },
+                        {
+                            "type": "widget",
+                            "widgetType": "tabs",
+                            "settings": {
+                                "tabs": [
+                                    {
+                                        "title": "Plan your curriculum",
+                                        "content": "You start with your passion and knowledge. Then choose a promising topic with the help of our Marketplace Insights tool."
+                                    },
+                                    {
+                                        "title": "Record your video",
+                                        "content": "Use the tools available to record and edit your videos to make them engaging and informative."
+                                    },
+                                    {
+                                        "title": "Launch your course",
+                                        "content": "Publish your course and share your knowledge with learners around the world."
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                                "title": "How we help you",
+                                "level": "h2",
+                                "align": "left",
+                                "typography": {"font_size": "24px", "font_family": "Arial"}
+                            }
+                        },
+                        {
+                            "type": "widget",
+                            "widgetType": "text-editor",
+                            "settings": {
+                                "content": "We offer plenty of resources on how to create your first course. Our instructor dashboard and curriculum pages help keep you organized."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "column",
+                    "settings": {"width": "50%"},
+                    "elements": [
+                        {
+                            "type": "widget",
+                            "widgetType": "image",
+                            "settings": {
+                                "image": {
+                                    "url": "https://via.placeholder.com/400",  # Placeholder URL for image
+                                    "alt": "Illustration"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+# Menyimpan file sebagai JSON di direktori sementara.
+import json
+
+file_path = "/mnt/data/how_to_begin_template.json"
+with open(file_path, "w") as json_file:
+    json.dump(elementor_template, json_file, indent=4)
+
+file_path
